@@ -1,7 +1,7 @@
 version: 2
 
 defaults: &defaults
-  working_directory: /tmp/grpcgen
+  working_directory: ~/project
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          mkdir build && echo 123 >> /tmp/grpcgen/build/rootfs.tar.gz
+          mkdir build && echo 1234 >> ~/project/build/rootfs.tar.gz
       - persist_to_workspace:
           root: build
           paths:
@@ -22,7 +22,7 @@ jobs:
       enabled: true
     steps:
       - attach_workspace:
-          at: /tmp/grpcgen
+          at: ~/project
       - run: |
           ls -l
 workflows:
