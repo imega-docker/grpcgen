@@ -1,18 +1,30 @@
 version: 2
 
+defaults: &defaults
+  working_directory: /tmp
+
 jobs:
   build:
+    <<: *defaults
     machine:
       enabled: true
     steps:
       - checkout
       - run: |
           make build || exit 1
+      - persist_to_workspace:
+          root: build
+          paths:
+            - rootfs.tar.gz
   release:
+    <<: *defaults
     machine:
       enabled: true
     steps:
       - checkout
+      - attach_workspace:
+          at: /tmp/build
+      - mv /tmp/build .
       - run: |
           make release TAG=$CIRCLE_TAG || exit 1
 workflows:
