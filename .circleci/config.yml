@@ -26,7 +26,7 @@ jobs:
           at: /tmp/grpcgen
       - mv /tmp/grpcgen .
       - run: |
-          make release TAG=$CIRCLE_TAG || exit 1
+          ls -l
 workflows:
   version: 2
   test_and_release:
