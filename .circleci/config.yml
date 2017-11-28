@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          mkdir build && echo 1234 >> ~/project/build/rootfs.tar.gz
+          make build || exit 1
       - persist_to_workspace:
           root: build
           paths:
@@ -24,7 +24,7 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run: |
-          ls -l
+          make release TAG=$CIRCLE_TAG || exit 1
 workflows:
   version: 2
   test_and_release:
