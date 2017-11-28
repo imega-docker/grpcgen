@@ -21,7 +21,6 @@ jobs:
     machine:
       enabled: true
     steps:
-      - checkout
       - attach_workspace:
           at: /tmp/grpcgen
       - run: |
