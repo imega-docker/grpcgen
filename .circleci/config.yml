@@ -24,9 +24,8 @@ jobs:
       - checkout
       - attach_workspace:
           at: /tmp/grpcgen
-      - mv /tmp/grpcgen .
       - run: |
-          ls -l
+          mv /tmp/grpcgen . && ls -l
 workflows:
   version: 2
   test_and_release:
