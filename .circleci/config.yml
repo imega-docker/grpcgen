@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          mkdir build && touch /tmp/grpcgen/build/rootfs.tar.gz
+          mkdir build && echo 123 >> /tmp/grpcgen/build/rootfs.tar.gz
       - persist_to_workspace:
           root: build
           paths:
@@ -25,7 +25,7 @@ jobs:
       - attach_workspace:
           at: /tmp/grpcgen
       - run: |
-          ls -l && mv /tmp/grpcgen/build .  && ls -l
+          ls -l
 workflows:
   version: 2
   test_and_release:
