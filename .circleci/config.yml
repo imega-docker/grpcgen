@@ -1,7 +1,7 @@
 version: 2
 
 defaults: &defaults
-  working_directory: /tmp
+  working_directory: /tmp/grpcgen
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          mkdir build && touch build/rootfs.tar.gz
+          mkdir build && touch /tmp/grpcgen/build/rootfs.tar.gz
       - persist_to_workspace:
           root: build
           paths:
@@ -23,8 +23,8 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: /tmp/build
-      - mv /tmp/build .
+          at: /tmp/grpcgen
+      - mv /tmp/grpcgen .
       - run: |
           make release TAG=$CIRCLE_TAG || exit 1
 workflows:
