@@ -21,6 +21,7 @@ jobs:
     machine:
       enabled: true
     steps:
+      - checkout
       - attach_workspace:
           at: ~/project
       - run: |
