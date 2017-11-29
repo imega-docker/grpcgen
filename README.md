@@ -5,17 +5,18 @@
 ## Protobuf version 3.3.2
 
 ## Gens
-  - protoc-gen-go
-  - protoc-gen-grpc-gateway
-  - protoc-gen-swagger
-  - protoc-gen-combo
-  - protoc-gen-gogo
-  - protoc-gen-gogofast
-  - protoc-gen-gogofaster
-  - protoc-gen-gogoslick
-  - protoc-gen-gogotypes
-  - protoc-gen-gostring
-  - protoc-gen-gofast
+  - [protoc-gen-go](https://github.com/golang/protobuf)
+  - [protoc-gen-grpc-gateway v1.3.0](https://github.com/gengo/grpc-gateway)
+  - [protoc-gen-swagger v1.3.0](https://github.com/gengo/grpc-gateway)
+  - [protoc-gen-protoactor](https://github.com/AsynkronIT/protoactor-go)
+  - [protoc-gen-combo v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gogo v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gogofast v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gogofaster v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gogoslick v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gogotypes v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gostring v0.5](https://github.com/gogo/protobuf)
+  - [protoc-gen-gofast v0.5](https://github.com/gogo/protobuf)
 
 ## The MIT License (MIT)
 
