@@ -8,7 +8,7 @@
   - [protoc-gen-go](https://github.com/golang/protobuf)
   - [protoc-gen-grpc-gateway v1.3.0](https://github.com/gengo/grpc-gateway)
   - [protoc-gen-swagger v1.3.0](https://github.com/gengo/grpc-gateway)
-  - [protoc-gen-protoactor](https://github.com/AsynkronIT/protoactor-go)
+  - [protoc-gen-gograin](https://github.com/AsynkronIT/protoactor-go)
   - [protoc-gen-combo v0.5](https://github.com/gogo/protobuf)
   - [protoc-gen-gogo v0.5](https://github.com/gogo/protobuf)
   - [protoc-gen-gogofast v0.5](https://github.com/gogo/protobuf)

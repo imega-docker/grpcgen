@@ -42,8 +42,9 @@ mkdir -p $GOPATH/src/github.com/AsynkronIT/protoactor-go
 cd $GOPATH/src/github.com/AsynkronIT
 git clone https://github.com/AsynkronIT/protoactor-go
 cd $GOPATH/src/github.com/AsynkronIT/protoactor-go
-git checkout master
-go get github.com/AsynkronIT/protoactor-go/protobuf/protoc-gen-protoactor || exit 1
+git checkout dev
+go get github.com/AsynkronIT/protoactor-go/protobuf/protoc-gen-gograin || exit 1
+cd $GOPATH
 
 
 
