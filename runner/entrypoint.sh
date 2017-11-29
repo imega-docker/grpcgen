@@ -28,25 +28,29 @@ go get github.com/golang/protobuf/protoc-gen-go || exit 1
 
 
 
-mkdir -p $GOPATH/src/gengo
-cd $GOPATH/src/gengo
+mkdir -p $GOPATH/src/github.com/gengo
+cd $GOPATH/src/github.com/gengo
 git clone https://github.com/gengo/grpc-gateway
-cd $GOPATH/src/gengo/grpc-gateway
+cd $GOPATH/src/github.com/gengo/grpc-gateway
 git checkout tags/$GEN_GENGO_GRPCGATEWAY -b genbuild
 go get github.com/gengo/grpc-gateway/protoc-gen-grpc-gateway || exit 1
 go get github.com/gengo/grpc-gateway/protoc-gen-swagger || exit 1
 cd $GOPATH
 
 
-
+mkdir -p $GOPATH/src/github.com/AsynkronIT/protoactor-go
+cd $GOPATH/src/github.com/AsynkronIT
+git clone https://github.com/AsynkronIT/protoactor-go
+cd $GOPATH/src/github.com/AsynkronIT/protoactor-go
+git checkout master
 go get github.com/AsynkronIT/protoactor-go/protobuf/protoc-gen-protoactor || exit 1
 
 
 
-mkdir -p $GOPATH/src/gogo
-cd $GOPATH/src/gogo
+mkdir -p $GOPATH/src/github.com/gogo
+cd $GOPATH/src/github.com/gogo
 git clone https://github.com/gogo/protobuf
-cd $GOPATH/src/gogo/protobuf
+cd $GOPATH/src/github.com/gogo/protobuf
 git checkout tags/$GEN_GOGO_PROTOBUF -b genbuild
 go get github.com/gogo/protobuf/protoc-gen-combo || exit 1
 go get github.com/gogo/protobuf/protoc-gen-gogo || exit 1
