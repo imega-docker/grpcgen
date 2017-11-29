@@ -11,7 +11,6 @@ jobs:
     steps:
       - checkout
       - run: |
-          echo 1
           make build || exit 1
       - persist_to_workspace:
           root: build
