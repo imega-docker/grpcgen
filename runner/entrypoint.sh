@@ -32,7 +32,7 @@ mkdir -p $GOPATH/src/gengo
 cd $GOPATH/src/gengo
 git clone https://github.com/gengo/grpc-gateway
 cd $GOPATH/src/gengo/grpc-gateway
-git checkout tags/$GEN_GENGO_GRPCGATEWAY genbuild
+git checkout tags/$GEN_GENGO_GRPCGATEWAY -b genbuild
 go get github.com/gengo/grpc-gateway/protoc-gen-grpc-gateway || exit 1
 go get github.com/gengo/grpc-gateway/protoc-gen-swagger || exit 1
 cd $GOPATH
@@ -47,7 +47,7 @@ mkdir -p $GOPATH/src/gogo
 cd $GOPATH/src/gogo
 git clone https://github.com/gogo/protobuf
 cd $GOPATH/src/gogo/protobuf
-git checkout tags/$GEN_GOGO_PROTOBUF genbuild
+git checkout tags/$GEN_GOGO_PROTOBUF -b genbuild
 go get github.com/gogo/protobuf/protoc-gen-combo || exit 1
 go get github.com/gogo/protobuf/protoc-gen-gogo || exit 1
 go get github.com/gogo/protobuf/protoc-gen-gogofast || exit 1
