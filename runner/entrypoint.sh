@@ -68,10 +68,13 @@ cd $GOPATH
 mkdir -p $ROOTFS/usr/local/bin
 mkdir -p $ROOTFS/usr/local/lib
 mkdir -p $ROOTFS/usr/lib
+mkdir -p $ROOTFS/usr/local/include
 
 # ===================copies plugins and libs========================
 
 cp /usr/local/bin/* $ROOTFS/usr/local/bin/
+
+cp -r /usr/local/include/* $ROOTFS/usr/local/include
 
 cp /go/bin/* $ROOTFS/usr/local/bin/
 
